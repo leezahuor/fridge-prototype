@@ -20,6 +20,7 @@ function FoodForm() {
       date: new Date(enteredDate),
     };
 
+    props.onSaveFoodData(foodData);
     setEnteredName("");
     setEnteredDate("");
   };
