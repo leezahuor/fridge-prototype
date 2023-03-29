@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function FoodForm() {
+function FoodForm(props) {
   const [enteredName, setEnteredName] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
 
@@ -20,6 +20,7 @@ function FoodForm() {
       date: new Date(enteredDate),
     };
 
+    props.onSaveFoodData(foodData);
     setEnteredName("");
     setEnteredDate("");
   };
@@ -29,14 +30,17 @@ function FoodForm() {
       <div>
         <div>
           <label>Name</label>
-          <input type="text" onChange={nameChangeHandler} />
+          <input type="text" value={enteredName} onChange={nameChangeHandler} />
         </div>
         <div>
           <label>Date</label>
-          <input type="date" onChange={dateChangeHandler} />
+          <input type="date" value={enteredDate} onChange={dateChangeHandler} />
         </div>
       </div>
       <div>
+        <button type="button" onClick={props.onCancel}>
+          Cancel
+        </button>
         <button type="submit">Add Item</button>
       </div>
     </form>

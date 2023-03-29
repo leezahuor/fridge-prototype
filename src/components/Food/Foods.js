@@ -1,12 +1,15 @@
 import FoodItem from "./FoodItem";
 
 function Foods(props) {
+  if (props.items.length === 0) {
+    return <h2>No foods available.</h2>;
+  }
+
   return (
     <div>
-      <FoodItem name={props.items[0].name} date={props.items[0].date} />
-      <FoodItem name={props.items[1].name} date={props.items[1].date} />
-      <FoodItem name={props.items[2].name} date={props.items[2].date} />
-      <FoodItem name={props.items[3].name} date={props.items[3].date} />
+      {props.items.map((foods) => (
+        <FoodItem key={foods.id} name={foods.name} date={foods.date} />
+      ))}
     </div>
   );
 }
