@@ -1,25 +1,25 @@
 import { NavLink } from "react-router-dom";
 
-function MainNavigation() {
+function FoodStorageNavigation() {
   return (
     <header>
       <nav>
         <ul>
           <li>
             <NavLink
-              to="/"
+              to="/foodstorages/fridge"
               className={({ isActive }) => (isActive ? "active" : undefined)}
               end
             >
-              Home
+              Fridge
             </NavLink>
           </li>
           <li>
             <NavLink
-              to="/foodstorages"
+              to="/foodstorages/freezer"
               className={({ isActive }) => (isActive ? "active" : undefined)}
             >
-              Food Storages
+              Freezer
             </NavLink>
           </li>
         </ul>
@@ -28,4 +28,4 @@ function MainNavigation() {
   );
 }
 
-export default MainNavigation;
+export default FoodStorageNavigation;

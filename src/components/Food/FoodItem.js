@@ -2,7 +2,7 @@ import { useSubmit } from "react-router-dom";
 
 import FoodDate from "./FoodDate";
 
-function FoodItem(props) {
+function FoodItem({ food }) {
   const submit = useSubmit();
 
   function deleteHandler() {
@@ -16,8 +16,8 @@ function FoodItem(props) {
   return (
     <li>
       <div>
-        <FoodDate date={props.date} />
-        <h2>{props.name}</h2>
+        <FoodDate date={food.date} />
+        <h2>{food.name}</h2>
       </div>
       <button onClick={deleteHandler}>Remove</button>
     </li>
