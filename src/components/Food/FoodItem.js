@@ -1,25 +1,29 @@
-import { useSubmit } from "react-router-dom";
+// import { useSubmit } from "react-router-dom";
 
 import FoodDate from "./FoodDate";
 
-function FoodItem({ food }) {
-  const submit = useSubmit();
+function FoodItem(props) {
+  // const submit = useSubmit();
 
-  function deleteHandler() {
-    const proceed = window.confirm("Are you sure?");
+  // function deleteHandler() {
+  //   const proceed = window.confirm("Are you sure?");
 
-    if (proceed) {
-      submit(null, { method: "delete" });
-    }
-  }
+  //   if (proceed) {
+  //     submit(null, { method: "delete" });
+  //   }
+  // }
+
+  const removeHandler = () => {
+    // props.onDelete(props.id);
+  };
 
   return (
     <li>
       <div>
-        <FoodDate date={food.date} />
-        <h2>{food.name}</h2>
+        <h2>{props.name}</h2>
+        <FoodDate date={props.date} />
       </div>
-      <button onClick={deleteHandler}>Remove</button>
+      <button onClick={removeHandler}>Remove</button>
     </li>
   );
 }
