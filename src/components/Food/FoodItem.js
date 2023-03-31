@@ -13,6 +13,10 @@ function FoodItem(props) {
   //   }
   // }
 
+  function removeItem() {}
+
+  
+
   const removeHandler = () => {
     // props.onDelete(props.id);
   };
