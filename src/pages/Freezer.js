@@ -4,9 +4,9 @@ import { useLoaderData } from "react-router-dom";
 import FoodList from "../components/Food/FoodList";
 
 function FreezerPage() {
-  const foods = useLoaderData();
+  const foodStorage = useLoaderData();
 
-  return <FoodList foods={foods} />;
+  return <FoodList foods={foodStorage} />;
 }
 
 // export default FreezerPage;

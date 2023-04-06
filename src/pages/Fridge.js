@@ -95,7 +95,7 @@ const DUMMY_FOODS = [
 ];
 
 function FridgePage() {
-  const [foods, setFoods] = useState(DUMMY_FOODS);
+  const [foods, setFoods] = useState('');
 
   const addFoodHandler = (food) => {
     setFoods((prevFoods) => {
