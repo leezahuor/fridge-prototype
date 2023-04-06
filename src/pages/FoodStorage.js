@@ -1,6 +1,6 @@
 // import { Link } from "react-router-dom";
 
-import FoodStorageList from "../components/FoodStorageList";
+import FoodStorageNavigation from "../components/FoodStorageNavigation";
 
 // const DUMMY_FOOD_STORAGES = [
 //   {
@@ -17,7 +17,7 @@ function FoodStoragePage() {
   return (
     <>
       <h1>Food Storages</h1>
-      <FoodStorageList />
+      <FoodStorageNavigation />
       {/* <ul>
         {DUMMY_FOOD_STORAGES.map((foodStorage) => (
           <li key={foodStorage.id}>

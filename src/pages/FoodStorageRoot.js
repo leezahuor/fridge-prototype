@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 
 import FoodStorageNavigation from "../components/FoodStorageNavigation";
 
-function FoodStoragesRootLayout() {
+function FoodStorageRootLayout() {
   return (
     <>
       <FoodStorageNavigation />
@@ -11,4 +11,4 @@ function FoodStoragesRootLayout() {
   );
 }
 
-export default FoodStoragesRootLayout;
+export default FoodStorageRootLayout;

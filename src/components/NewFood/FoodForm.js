@@ -48,3 +48,33 @@ function FoodForm(props) {
 }
 
 export default FoodForm;
+
+// import { useNavigate } from "react-router-dom";
+
+// function FoodForm({ method, food }) {
+//   const navigate = useNavigate();
+//   function cancelHandler() {
+//     navigate("..");
+//   }
+
+//   return (
+//     <form>
+//       <p>
+//         <label htmlFor="name">Food Name</label>
+//         <input id="name" type="text" name="name" required />
+//       </p>
+//       <p>
+//         <label htmlFor="date">Date</label>
+//         <input id="date" type="date" name="date" required />
+//       </p>
+//       <div>
+//         <button type="button" onClick={cancelHandler}>
+//           Cancel
+//         </button>
+//         <button>Save</button>
+//       </div>
+//     </form>
+//   );
+// }
+
+// export default FoodForm;
