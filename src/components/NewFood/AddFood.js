@@ -21,7 +21,7 @@ const DUMMY_FOODS = [
   },
 ];
 
-const AddFood = () => {
+const AddFood = (props) => {
   const [foods, setFoods] = useState(DUMMY_FOODS);
 
   const addFoodHandler = (food) => {
